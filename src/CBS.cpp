@@ -707,7 +707,7 @@ void CBS::savePathsYAML(const string &fileName) const
     else if (solution_cost >= 0){
         output << "success: 1" << endl;
 
-        output << "dim: [" << 1 << ", " << 1 << "]" << endl;
+        output << "dim: [" << num_of_cols << ", " << num_of_rows << "]" << endl;
         output << "num: " << num_of_agents << endl;
         output << "cost: " << solution_cost << endl;
         output << "runtime: " << runtime << endl;
@@ -1155,6 +1155,8 @@ CBS::CBS(const Instance& instance, bool sipp, int screen) :
 	{
 		instance.printAgents();
 	}
+    num_of_rows = instance.num_of_rows;
+    num_of_cols = instance.num_of_cols;
 }
 
 bool CBS::generateRoot()
