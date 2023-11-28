@@ -713,10 +713,10 @@ void CBS::savePathsYAML(const string &fileName) const
         output << "runtime: " << runtime << endl;
 
         // save these meta information for later
-        // output << "HighLevelExp: " << num_HL_expanded << endl;
-        // output << "HighLevelGen: " << num_HL_generated << endl;
-        // output << "LowLevelExp: " << num_LL_expanded << endl;
-        // output << "LowLevelGen: " << num_LL_generated << endl;
+        output << "HighLevelExp: " << num_HL_expanded << endl;
+        output << "HighLevelGen: " << num_HL_generated << endl;
+        output << "LowLevelExp: " << num_LL_expanded << endl;
+        output << "LowLevelGen: " << num_LL_generated << endl;
 
         output << "schedule: " << endl;
         int agent_t = 0;
